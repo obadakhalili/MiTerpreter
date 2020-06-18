@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-navbar type="dark" variant="dark">
+      <b-navbar-brand href="#">MiTerpreter: MIPS Interpreter</b-navbar-brand>
+    </b-navbar>
+    <b-container class="mt-5">
+      <b-row>
+        <b-col lg="8">
+          <Editor />
+        </b-col>
+        <b-col lg="4" class="control">
+          <Controllers class="mb-2" />
+          <Tabs />
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Editor from './components/Editor.vue';
+import Controllers from './components/Controllers.vue';
+import Tabs from './components/Tabs.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Editor,
+    Controllers,
+    Tabs
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@media only screen and (max-width: 995px) {
+  .control {
+    margin-top: 500px;
+    margin-bottom: 50px;
+  }
 }
 </style>
