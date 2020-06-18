@@ -13,10 +13,11 @@ export default function(AST, labels, registers, memory) {
                 limit *= 2;
             }
         }
-        const opFunc = opcodes[AST[i].format].find(opcode => opcode.name == AST[i].opcode).func;
+        let opFunc = opcodes[AST[i].format].find(opcode => opcode.name == AST[i].opcode);
         if (!opFunc) {
             throw new TypeError(`Wrong opcode "${AST[i].opcode}" at line ${AST[i].line}`);
         }
+        opFunc = opFunc.func;
         if (AST[i].format == 'R') {
             validateRegisters(AST[i].line, AST[i].rd, AST[i].rs, AST[i].rt);
             opFunc(AST[i].rd, AST[i].rs, AST[i].rt, registers);
