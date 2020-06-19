@@ -14,7 +14,7 @@
       </b-tabs>
     </b-tab>
     <b-tab title="Memory">
-      <div class="memory-inputs">
+      <div>
         <Memory />
       </div>
     </b-tab>
