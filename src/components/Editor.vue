@@ -1,5 +1,5 @@
 <template>
-  <div id="editor"></div>
+  <div id="editor"># Here goes your MIPS code ..</div>
 </template>
 
 <script>
@@ -10,7 +10,8 @@ export default {
   mounted() {
     const editor = ace.edit('editor', {
       mode: 'ace/mode/assembly_x86',
-      fontSize: '16px'
+      fontSize: '15px',
+      showPrintMargin: false
     });
     this.updateEditor(editor);
   },
@@ -26,6 +27,7 @@ export default {
     bottom: 0;
     left: 0;
     min-height: 490.8px;
+    border: 1px solid black;
 }
 @media only screen and (max-width: 995px) {
   #editor {
