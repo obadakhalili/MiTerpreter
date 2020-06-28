@@ -15,7 +15,7 @@ import { mapGetters } from 'vuex';
 export default {
   name: 'Registers',
   props: ['category'],
-  computed: mapGetters({ registers: 'registers'}),
+  computed: mapGetters(['registers']),
   components: {
     RegisterInput
   }

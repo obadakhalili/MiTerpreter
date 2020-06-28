@@ -15,7 +15,7 @@ export default {
     });
     this.updateEditor(editor);
   },
-  methods: mapActions({ updateEditor: 'updateEditor' })
+  methods: mapActions(['updateEditor'])
 };
 </script>
 

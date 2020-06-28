@@ -1,7 +1,6 @@
 <template>
   <div class="log smt-2">
-    <b-alert
-    v-for="(message, index) in reversedLog"
+    <b-alert v-for="(message, index) in reversedLog"
     :key="index"
     show
     variant="danger"

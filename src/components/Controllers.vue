@@ -16,7 +16,7 @@ import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'Controllers',
-  computed: { ...mapGetters(['registers', 'memory', 'log', 'editor']) },
+  computed: mapGetters(['registers', 'memory', 'log', 'editor']),
   methods: {
     ...mapActions(['updateRegisters', 'resetRegisters', 'updateMemory', 'resetMemory', 'pushToLog', 'clearLog']),
     runCode() {

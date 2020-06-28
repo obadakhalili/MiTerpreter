@@ -14,9 +14,7 @@ import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'Memory',
-  computed: {
-    ...mapGetters(['memory', 'memorySize'])
-  },
+  computed: mapGetters(['memory', 'memorySize']),
   methods: mapActions({ addCell: 'addCell' }),
   components: {
     MemoryInput
