@@ -7,11 +7,7 @@ Vue.use(VueRouter);
 
 const routes =  [
   {
-    path: '/',
-    redirect: '/code'
-  },
-  {
-    path: '/code',
+    path: '/(code)?',
     component: Code
   },
   {
